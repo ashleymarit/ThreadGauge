@@ -5,14 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Work orders — Thread Gauge Co.</title>
   <meta name="description" content="Hanging work-order tickets from a fictional thread-gauge shop. Demo jobs only.">
-  <meta name="theme-color" content="#2a2e33">
+  <meta name="theme-color" content="#2c3134">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800&family=IBM+Plex+Mono:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Mono:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body class="page-tickets">
+  <svg class="shop-defs" aria-hidden="true" focusable="false">
+    <defs>
+      <filter id="grease-smear" x="-25%" y="-25%" width="150%" height="150%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.78" numOctaves="3" seed="4" result="n"/>
+        <feDisplacementMap in="SourceGraphic" in2="n" scale="1.65" xChannelSelector="R" yChannelSelector="G" result="d"/>
+        <feGaussianBlur in="d" stdDeviation="0.32"/>
+      </filter>
+      <filter id="stamp-ink" x="-18%" y="-18%" width="136%" height="136%">
+        <feTurbulence type="fractalNoise" baseFrequency="1.05" numOctaves="2" seed="9" result="n"/>
+        <feDisplacementMap in="SourceGraphic" in2="n" scale="1.05"/>
+      </filter>
+    </defs>
+  </svg>
   <a class="skip" href="#floor">Skip to tickets</a>
 
   <div class="tubes" aria-hidden="true">
@@ -25,10 +38,10 @@
     <div class="mast-plate">
       <a class="brand" href="index.html">
         <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true">
-          <rect x="3" y="3" width="42" height="42" fill="#32383e" stroke="#9aa3ab" stroke-width="1.5"/>
-          <path d="M8 24h6l2-5 2.6 10 2.4-10 2 5h7" fill="none" stroke="#e6c84a" stroke-width="2.2" stroke-linejoin="round"/>
-          <circle cx="16" cy="36" r="3.2" fill="#c9d0d6"/>
-          <circle cx="32" cy="36" r="3.2" fill="#b42318"/>
+          <rect x="2.5" y="2.5" width="43" height="43" fill="none" stroke="#9aa3ab" stroke-width="1.2" opacity="0.7"/>
+          <path d="M9 23h5l2-5 2.5 10 2.3-10 1.8 5h7" fill="none" stroke="#c4a034" stroke-width="1.8" stroke-linejoin="round" opacity="0.85"/>
+          <circle cx="16" cy="35" r="2.8" fill="#b7bec4"/>
+          <circle cx="32" cy="35" r="2.8" fill="#8c2218"/>
         </svg>
         <span class="brand-type">
           <span class="brand-name">Thread Gauge Co.</span>
@@ -74,7 +87,7 @@
             </dl>
             <div class="wo-marks" aria-hidden="true">
               <svg class="grease-svg grease-svg-sm" viewBox="0 0 180 56" data-grease-draw>
-                <path class="grease-check" d="M20 28 L 34 42 L 68 12"/>
+                <path class="grease-check" d="M19 29 L 33 43 L 69 13"/>
                 <text class="grease-word" x="80" y="36">GO</text>
               </svg>
             </div>
@@ -96,7 +109,7 @@
             </dl>
             <div class="wo-marks" aria-hidden="true">
               <svg class="grease-svg grease-svg-sm" viewBox="0 0 180 56" data-grease-draw>
-                <path class="grease-line" d="M16 40 C 50 34, 90 46, 160 38"/>
+                <path class="grease-line" d="M15 41 C 49 33, 91 47, 161 37"/>
                 <text class="grease-word grease-word-hold" x="28" y="28">HOLD</text>
               </svg>
             </div>
@@ -118,7 +131,7 @@
             </dl>
             <div class="wo-marks" aria-hidden="true">
               <svg class="grease-svg grease-svg-sm" viewBox="0 0 180 56" data-grease-draw>
-                <path class="grease-check" d="M22 26 L 36 40 L 70 10"/>
+                <path class="grease-check" d="M21 27 L 35 41 L 71 11"/>
                 <text class="grease-word" x="82" y="34">GO</text>
               </svg>
             </div>
@@ -140,7 +153,7 @@
             </dl>
             <div class="wo-marks" aria-hidden="true">
               <svg class="grease-svg grease-svg-sm" viewBox="0 0 180 56" data-grease-draw>
-                <path class="grease-line" d="M14 42 C 60 36, 110 48, 168 40"/>
+                <path class="grease-line" d="M13 43 C 59 35, 111 49, 169 39"/>
                 <text class="grease-word grease-word-hold" x="22" y="30">REWORK</text>
               </svg>
             </div>
@@ -162,7 +175,7 @@
             </dl>
             <div class="wo-marks" aria-hidden="true">
               <svg class="grease-svg grease-svg-sm" viewBox="0 0 180 56" data-grease-draw>
-                <path class="grease-check" d="M18 30 L 32 44 L 66 14"/>
+                <path class="grease-check" d="M17 31 L 31 45 L 67 15"/>
                 <text class="grease-word" x="78" y="36">GO</text>
               </svg>
             </div>
@@ -184,7 +197,7 @@
             </dl>
             <div class="wo-marks" aria-hidden="true">
               <svg class="grease-svg grease-svg-sm" viewBox="0 0 180 56" data-grease-draw>
-                <path class="grease-line" d="M18 38 C 70 32, 120 44, 164 36"/>
+                <path class="grease-line" d="M17 39 C 69 31, 121 45, 165 35"/>
                 <text class="grease-word" x="24" y="28">BAY</text>
               </svg>
             </div>

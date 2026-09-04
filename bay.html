@@ -5,14 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Bay door — Thread Gauge Co.</title>
   <meta name="description" content="Bay door for a fictional thread-gauge shop. Demo only. No hours, no street, no ringing line.">
-  <meta name="theme-color" content="#2a2e33">
+  <meta name="theme-color" content="#2c3134">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800&family=IBM+Plex+Mono:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Mono:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body class="page-bay">
+  <svg class="shop-defs" aria-hidden="true" focusable="false">
+    <defs>
+      <filter id="grease-smear" x="-25%" y="-25%" width="150%" height="150%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.78" numOctaves="3" seed="4" result="n"/>
+        <feDisplacementMap in="SourceGraphic" in2="n" scale="1.65" xChannelSelector="R" yChannelSelector="G" result="d"/>
+        <feGaussianBlur in="d" stdDeviation="0.32"/>
+      </filter>
+      <filter id="stamp-ink" x="-18%" y="-18%" width="136%" height="136%">
+        <feTurbulence type="fractalNoise" baseFrequency="1.05" numOctaves="2" seed="9" result="n"/>
+        <feDisplacementMap in="SourceGraphic" in2="n" scale="1.05"/>
+      </filter>
+    </defs>
+  </svg>
   <a class="skip" href="#floor">Skip to bay</a>
 
   <div class="tubes" aria-hidden="true">
@@ -25,10 +38,10 @@
     <div class="mast-plate">
       <a class="brand" href="index.html">
         <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true">
-          <rect x="3" y="3" width="42" height="42" fill="#32383e" stroke="#9aa3ab" stroke-width="1.5"/>
-          <path d="M8 24h6l2-5 2.6 10 2.4-10 2 5h7" fill="none" stroke="#e6c84a" stroke-width="2.2" stroke-linejoin="round"/>
-          <circle cx="16" cy="36" r="3.2" fill="#c9d0d6"/>
-          <circle cx="32" cy="36" r="3.2" fill="#b42318"/>
+          <rect x="2.5" y="2.5" width="43" height="43" fill="none" stroke="#9aa3ab" stroke-width="1.2" opacity="0.7"/>
+          <path d="M9 23h5l2-5 2.5 10 2.3-10 1.8 5h7" fill="none" stroke="#c4a034" stroke-width="1.8" stroke-linejoin="round" opacity="0.85"/>
+          <circle cx="16" cy="35" r="2.8" fill="#b7bec4"/>
+          <circle cx="32" cy="35" r="2.8" fill="#8c2218"/>
         </svg>
         <span class="brand-type">
           <span class="brand-name">Thread Gauge Co.</span>
@@ -92,7 +105,7 @@
           <p class="form-ack" id="form-ack" role="status" hidden>Stamped. Demo only — nothing was sent.</p>
           <div class="wo-marks" aria-hidden="true">
             <svg class="grease-svg grease-svg-sm" viewBox="0 0 180 56" data-grease-draw>
-              <path class="grease-check" d="M24 28 L 38 42 L 74 10"/>
+              <path class="grease-check" d="M23 29 L 37 43 L 75 11"/>
               <text class="grease-word" x="86" y="34">RECVD</text>
             </svg>
           </div>
