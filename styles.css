@@ -734,9 +734,18 @@ a:hover {
 }
 
 .locker-door:hover,
-.locker-face:hover,
+.locker-face:hover {
+  color: var(--ticket);
+}
+
 .locker-face[aria-expanded="true"] {
   color: var(--ticket);
+  transform: perspective(420px) rotateY(-7deg);
+  transform-origin: left center;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.16),
+    inset -16px 0 0 #161a1d,
+    8px 4px 0 #0d0f12;
 }
 
 .locker-plate {
