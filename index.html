@@ -5,14 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Thread Gauge Co. — tool crib</title>
   <meta name="description" content="Fictional machine-shop crib. We cut, chase, and certify threads. GO or NO-GO. Side Quest Operations house demo.">
-  <meta name="theme-color" content="#2a2e33">
+  <meta name="theme-color" content="#2c3134">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800&family=IBM+Plex+Mono:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Mono:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body class="page-crib">
+  <svg class="shop-defs" aria-hidden="true" focusable="false">
+    <defs>
+      <filter id="grease-smear" x="-25%" y="-25%" width="150%" height="150%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.78" numOctaves="3" seed="4" result="n"/>
+        <feDisplacementMap in="SourceGraphic" in2="n" scale="1.65" xChannelSelector="R" yChannelSelector="G" result="d"/>
+        <feGaussianBlur in="d" stdDeviation="0.32"/>
+      </filter>
+      <filter id="stamp-ink" x="-18%" y="-18%" width="136%" height="136%">
+        <feTurbulence type="fractalNoise" baseFrequency="1.05" numOctaves="2" seed="9" result="n"/>
+        <feDisplacementMap in="SourceGraphic" in2="n" scale="1.05"/>
+      </filter>
+    </defs>
+  </svg>
   <a class="skip" href="#floor">Skip to crib</a>
 
   <div class="tubes" aria-hidden="true">
@@ -25,10 +38,10 @@
     <div class="mast-plate">
       <a class="brand" href="index.html">
         <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true">
-          <rect x="3" y="3" width="42" height="42" fill="#32383e" stroke="#9aa3ab" stroke-width="1.5"/>
-          <path d="M8 24h6l2-5 2.6 10 2.4-10 2 5h7" fill="none" stroke="#e6c84a" stroke-width="2.2" stroke-linejoin="round"/>
-          <circle cx="16" cy="36" r="3.2" fill="#c9d0d6"/>
-          <circle cx="32" cy="36" r="3.2" fill="#b42318"/>
+          <rect x="2.5" y="2.5" width="43" height="43" fill="none" stroke="#9aa3ab" stroke-width="1.2" opacity="0.7"/>
+          <path d="M9 23h5l2-5 2.5 10 2.3-10 1.8 5h7" fill="none" stroke="#c4a034" stroke-width="1.8" stroke-linejoin="round" opacity="0.85"/>
+          <circle cx="16" cy="35" r="2.8" fill="#b7bec4"/>
+          <circle cx="32" cy="35" r="2.8" fill="#8c2218"/>
         </svg>
         <span class="brand-type">
           <span class="brand-name">Thread Gauge Co.</span>
@@ -63,29 +76,22 @@
       </div>
 
       <aside class="gauge-block" aria-label="Go / no-go gauge">
-        <svg class="gauge-face" viewBox="0 0 220 220" role="img" aria-labelledby="gauge-title">
-          <title id="gauge-title">Shop gauge settling on GO</title>
-          <defs>
-            <radialGradient id="dial" cx="50%" cy="42%" r="58%">
-              <stop offset="0%" stop-color="#6a7178"/>
-              <stop offset="70%" stop-color="#3a4046"/>
-              <stop offset="100%" stop-color="#1e2226"/>
-            </radialGradient>
-          </defs>
-          <circle cx="110" cy="110" r="104" fill="#2b3035" stroke="#8b939b" stroke-width="4"/>
-          <circle cx="110" cy="110" r="88" fill="url(#dial)" stroke="#c5ccd2" stroke-width="2"/>
-          <g fill="#d5dbe0" font-family="IBM Plex Mono, monospace" font-size="11" text-anchor="middle">
-            <text x="48" y="150">NO-GO</text>
-            <text x="172" y="150">GO</text>
-          </g>
-          <path d="M110 110 L58 148" stroke="#8a9096" stroke-width="2"/>
-          <path d="M110 110 L162 148" stroke="#8a9096" stroke-width="2"/>
-          <g class="needle" data-needle>
-            <polygon points="110,110 104,42 110,32 116,42" fill="#b42318"/>
-            <circle cx="110" cy="110" r="8" fill="#1a1c1f" stroke="#e6c84a" stroke-width="2"/>
-          </g>
-          <text x="110" y="188" text-anchor="middle" fill="#e6c84a" font-family="IBM Plex Mono, monospace" font-size="10">CLASS 2A</text>
-        </svg>
+        <div class="gauge-housing">
+          <svg class="gauge-face" viewBox="0 0 220 220" role="img" aria-labelledby="gauge-title">
+            <title id="gauge-title">Shop gauge settling on GO</title>
+            <g fill="#c8cdd1" font-family="IBM Plex Mono, monospace" font-size="10" letter-spacing="1.1" text-anchor="middle" opacity="0.82">
+              <text x="52" y="152">NO-GO</text>
+              <text x="168" y="152">GO</text>
+            </g>
+            <text x="110" y="186" text-anchor="middle" fill="#c4a034" font-family="IBM Plex Mono, monospace" font-size="9" letter-spacing="1.4" opacity="0.88">CLASS 2A</text>
+            <g class="needle" data-needle>
+              <polygon points="112,113 107,52 111,34 117,52" fill="rgba(0,0,0,0.32)"/>
+              <polygon points="110,110 106.4,46 110,26 113.6,46" fill="#5c1612"/>
+              <polygon points="110,110 109,46 110,26 111.6,46" fill="#a82c22"/>
+              <circle cx="110" cy="110" r="5.4" fill="#2c3034" stroke="#8b9298" stroke-width="1.2"/>
+            </g>
+          </svg>
+        </div>
         <p class="gauge-cap">Needle settles when the ticket stamps.</p>
       </aside>
 
@@ -122,9 +128,9 @@
           </p>
           <div class="wo-marks" aria-hidden="true">
             <svg class="grease-svg" viewBox="0 0 220 70" data-grease-draw>
-              <path class="grease-line" d="M12 48 C 40 44, 80 52, 118 46 S 180 40, 208 44"/>
-              <path class="grease-check" d="M28 22 L 42 38 L 78 8"/>
-              <text class="grease-word" x="92" y="32">GO</text>
+              <path class="grease-line" d="M11 49 C 38 43, 79 54, 116 45 S 178 41, 209 46"/>
+              <path class="grease-check" d="M27 24 L 41 39 L 79 9"/>
+              <text class="grease-word" x="92" y="33">GO</text>
             </svg>
           </div>
           <footer class="wo-foot">
