@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shop floor — Thread Gauge Co.</title>
+  <meta name="description" content="Locker bank on a fictional thread-gauge floor. Plug, ring, chase, wires. Demo only.">
+  <meta name="theme-color" content="#2a2e33">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800&family=IBM+Plex+Mono:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="page-floor">
+  <a class="skip" href="#floor">Skip to lockers</a>
+
+  <div class="tubes" aria-hidden="true">
+    <span class="tube"></span>
+    <span class="tube"></span>
+    <span class="tube"></span>
+  </div>
+
+  <header class="mast">
+    <div class="mast-plate">
+      <a class="brand" href="index.html">
+        <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true">
+          <rect x="3" y="3" width="42" height="42" fill="#32383e" stroke="#9aa3ab" stroke-width="1.5"/>
+          <path d="M8 24h6l2-5 2.6 10 2.4-10 2 5h7" fill="none" stroke="#e6c84a" stroke-width="2.2" stroke-linejoin="round"/>
+          <circle cx="16" cy="36" r="3.2" fill="#c9d0d6"/>
+          <circle cx="32" cy="36" r="3.2" fill="#b42318"/>
+        </svg>
+        <span class="brand-type">
+          <span class="brand-name">Thread Gauge Co.</span>
+          <span class="brand-sub">GO · NO-GO</span>
+        </span>
+      </a>
+      <p class="mast-stamp">TG-FLOOR · LOCKER BANK</p>
+    </div>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="shop-nav">
+      <span class="nav-toggle-bar"></span>
+      Menu
+    </button>
+    <nav class="shop-nav" id="shop-nav" aria-label="Shop">
+      <a href="index.html"><span class="tag-no">A-01</span> Crib</a>
+      <a href="floor.html" aria-current="page"><span class="tag-no">A-12</span> Floor</a>
+      <a href="tickets.html"><span class="tag-no">B-04</span> Tickets</a>
+      <a href="bay.html"><span class="tag-no">C-09</span> Bay</a>
+    </nav>
+  </header>
+
+  <main id="floor" class="floor-main">
+    <header class="floor-head">
+      <p class="wall-kicker">Shop floor / crib catalog</p>
+      <h1>What’s in the lockers.</h1>
+      <p class="wall-lead">Six cabinets. Pull a door. Nothing here is priced. Nothing here ships.</p>
+    </header>
+
+    <div class="cabinet">
+      <article class="locker-unit" id="plug">
+        <button class="locker-face" type="button" aria-expanded="false" data-locker>
+          <span class="locker-plate">A-12</span>
+          <span class="locker-name">Plug gauges</span>
+          <span class="locker-handle" aria-hidden="true"></span>
+        </button>
+        <div class="locker-bin" hidden>
+          <p class="bin-stamp">BIN A-12</p>
+          <ul>
+            <li>Metric GO / NO-GO plugs · M3–M24</li>
+            <li>UNC / UNF plug sets · #4 through 1&quot;</li>
+            <li>Pipe plugs · NPT 1/8–1</li>
+            <li>Left-hand on request · tagged red</li>
+          </ul>
+          <p class="bin-grease" data-grease="underline">wipe before you hang them</p>
+        </div>
+      </article>
+
+      <article class="locker-unit" id="ring">
+        <button class="locker-face" type="button" aria-expanded="false" data-locker>
+          <span class="locker-plate">A-14</span>
+          <span class="locker-name">Ring gauges</span>
+          <span class="locker-handle" aria-hidden="true"></span>
+        </button>
+        <div class="locker-bin" hidden>
+          <p class="bin-stamp">BIN A-14</p>
+          <ul>
+            <li>External GO / NO-GO rings</li>
+            <li>Setting rings for the air stand</li>
+            <li>Worn rings striped and pulled</li>
+          </ul>
+          <p class="bin-grease" data-grease="underline">out of round = hold</p>
+        </div>
+      </article>
+
+      <article class="locker-unit" id="chase">
+        <button class="locker-face" type="button" aria-expanded="false" data-locker>
+          <span class="locker-plate">B-03</span>
+          <span class="locker-name">Chase &amp; mill</span>
+          <span class="locker-handle" aria-hidden="true"></span>
+        </button>
+        <div class="locker-bin" hidden>
+          <p class="bin-stamp">BIN B-03</p>
+          <ul>
+            <li>Single-point chase on the Hardinge</li>
+            <li>Thread mills for the VMC</li>
+            <li>Dies and chasers · shop use only</li>
+          </ul>
+          <p class="bin-grease" data-grease="underline">print first, then cut</p>
+        </div>
+      </article>
+
+      <article class="locker-unit" id="wire">
+        <button class="locker-face" type="button" aria-expanded="false" data-locker>
+          <span class="locker-plate">B-07</span>
+          <span class="locker-name">Wires &amp; blocks</span>
+          <span class="locker-handle" aria-hidden="true"></span>
+        </button>
+        <div class="locker-bin" hidden>
+          <p class="bin-stamp">BIN B-07</p>
+          <ul>
+            <li>Best-wire sets · 3-wire method</li>
+            <li>Gage blocks · 81 pc · shop grade</li>
+            <li>Pitch micrometers hung on the peg</li>
+          </ul>
+          <p class="bin-grease" data-grease="underline">don’t pocket the wires</p>
+        </div>
+      </article>
+
+      <article class="locker-unit" id="pipe">
+        <button class="locker-face" type="button" aria-expanded="false" data-locker>
+          <span class="locker-plate">C-02</span>
+          <span class="locker-name">Pipe &amp; Acme</span>
+          <span class="locker-handle" aria-hidden="true"></span>
+        </button>
+        <div class="locker-bin" hidden>
+          <p class="bin-stamp">BIN C-02</p>
+          <ul>
+            <li>NPT / NPTF L1 and L2</li>
+            <li>Acme and stub Acme</li>
+            <li>Trapezoidal on the metric rack</li>
+          </ul>
+          <p class="bin-grease" data-grease="underline">taper is not optional</p>
+        </div>
+      </article>
+
+      <article class="locker-unit" id="cert">
+        <button class="locker-face" type="button" aria-expanded="false" data-locker>
+          <span class="locker-plate">C-11</span>
+          <span class="locker-name">Cert &amp; ink</span>
+          <span class="locker-handle" aria-hidden="true"></span>
+        </button>
+        <div class="locker-bin" hidden>
+          <p class="bin-stamp">BIN C-11</p>
+          <ul>
+            <li>Shop certs · demo slips only</li>
+            <li>Stamp pad · black + shop red</li>
+            <li>Grease pencils · carbon, not pretty</li>
+          </ul>
+          <p class="bin-grease" data-grease="underline">stamp after it gauges</p>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <footer class="shop-foot">
+    <div class="kickplate" aria-hidden="true"></div>
+    <p class="foot-stamp">THREAD GAUGE CO.</p>
+    <p>Bay 7 · Demo floor · Side Quest Operations house demo. No hours. No street. No ringing line.</p>
+    <p><a href="tickets.html">Ticket rail</a> · <a href="bay.html">Bay door</a></p>
+  </footer>
+  <script src="site.js" defer></script>
+</body>
+</html>

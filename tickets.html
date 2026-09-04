@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Work orders — Thread Gauge Co.</title>
+  <meta name="description" content="Hanging work-order tickets from a fictional thread-gauge shop. Demo jobs only.">
+  <meta name="theme-color" content="#2a2e33">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800&family=IBM+Plex+Mono:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="page-tickets">
+  <a class="skip" href="#floor">Skip to tickets</a>
+
+  <div class="tubes" aria-hidden="true">
+    <span class="tube"></span>
+    <span class="tube"></span>
+    <span class="tube"></span>
+  </div>
+
+  <header class="mast">
+    <div class="mast-plate">
+      <a class="brand" href="index.html">
+        <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true">
+          <rect x="3" y="3" width="42" height="42" fill="#32383e" stroke="#9aa3ab" stroke-width="1.5"/>
+          <path d="M8 24h6l2-5 2.6 10 2.4-10 2 5h7" fill="none" stroke="#e6c84a" stroke-width="2.2" stroke-linejoin="round"/>
+          <circle cx="16" cy="36" r="3.2" fill="#c9d0d6"/>
+          <circle cx="32" cy="36" r="3.2" fill="#b42318"/>
+        </svg>
+        <span class="brand-type">
+          <span class="brand-name">Thread Gauge Co.</span>
+          <span class="brand-sub">GO · NO-GO</span>
+        </span>
+      </a>
+      <p class="mast-stamp">TG-RAIL · OPEN TICKETS</p>
+    </div>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="shop-nav">
+      <span class="nav-toggle-bar"></span>
+      Menu
+    </button>
+    <nav class="shop-nav" id="shop-nav" aria-label="Shop">
+      <a href="index.html"><span class="tag-no">A-01</span> Crib</a>
+      <a href="floor.html"><span class="tag-no">A-12</span> Floor</a>
+      <a href="tickets.html" aria-current="page"><span class="tag-no">B-04</span> Tickets</a>
+      <a href="bay.html"><span class="tag-no">C-09</span> Bay</a>
+    </nav>
+  </header>
+
+  <main id="floor" class="tickets-main">
+    <header class="floor-head">
+      <p class="wall-kicker">Ticket rail / shop copy</p>
+      <h1>What hung this week.</h1>
+      <p class="wall-lead">Manila, carbon, grease. These jobs are invented for the demo floor.</p>
+    </header>
+
+    <div class="rail" aria-hidden="true"></div>
+
+    <ol class="ticket-rail">
+      <li>
+        <article class="wo wo-hang" data-ticket>
+          <div class="wo-carbon" aria-hidden="true"></div>
+          <div class="wo-sheet">
+            <div class="wo-clip" aria-hidden="true"></div>
+            <header class="wo-head">
+              <p class="wo-form">FORM TG-7</p>
+              <p class="wo-stamp" data-stamp>WO-4407</p>
+            </header>
+            <dl class="wo-fields">
+              <div><dt>JOB</dt><dd>M12 × 1.75 plug set</dd></div>
+              <div><dt>STATUS</dt><dd>HUNG · A-12</dd></div>
+            </dl>
+            <div class="wo-marks" aria-hidden="true">
+              <svg class="grease-svg grease-svg-sm" viewBox="0 0 180 56" data-grease-draw>
+                <path class="grease-check" d="M20 28 L 34 42 L 68 12"/>
+                <text class="grease-word" x="80" y="36">GO</text>
+              </svg>
+            </div>
+          </div>
+        </article>
+      </li>
+      <li>
+        <article class="wo wo-hang wo-tilt" data-ticket>
+          <div class="wo-carbon" aria-hidden="true"></div>
+          <div class="wo-sheet">
+            <div class="wo-clip" aria-hidden="true"></div>
+            <header class="wo-head">
+              <p class="wo-form">FORM TG-7</p>
+              <p class="wo-stamp wo-stamp-hold" data-stamp>WO-4412</p>
+            </header>
+            <dl class="wo-fields">
+              <div><dt>JOB</dt><dd>5/8-11 UNC ring</dd></div>
+              <div><dt>STATUS</dt><dd>HOLD · out of round</dd></div>
+            </dl>
+            <div class="wo-marks" aria-hidden="true">
+              <svg class="grease-svg grease-svg-sm" viewBox="0 0 180 56" data-grease-draw>
+                <path class="grease-line" d="M16 40 C 50 34, 90 46, 160 38"/>
+                <text class="grease-word grease-word-hold" x="28" y="28">HOLD</text>
+              </svg>
+            </div>
+          </div>
+        </article>
+      </li>
+      <li>
+        <article class="wo wo-hang" data-ticket>
+          <div class="wo-carbon" aria-hidden="true"></div>
+          <div class="wo-sheet">
+            <div class="wo-clip" aria-hidden="true"></div>
+            <header class="wo-head">
+              <p class="wo-form">FORM TG-7</p>
+              <p class="wo-stamp" data-stamp>WO-4418</p>
+            </header>
+            <dl class="wo-fields">
+              <div><dt>JOB</dt><dd>NPT 1/2 chase + cert</dd></div>
+              <div><dt>STATUS</dt><dd>STAMPED</dd></div>
+            </dl>
+            <div class="wo-marks" aria-hidden="true">
+              <svg class="grease-svg grease-svg-sm" viewBox="0 0 180 56" data-grease-draw>
+                <path class="grease-check" d="M22 26 L 36 40 L 70 10"/>
+                <text class="grease-word" x="82" y="34">GO</text>
+              </svg>
+            </div>
+          </div>
+        </article>
+      </li>
+      <li>
+        <article class="wo wo-hang wo-tilt-rev" data-ticket>
+          <div class="wo-carbon" aria-hidden="true"></div>
+          <div class="wo-sheet">
+            <div class="wo-clip" aria-hidden="true"></div>
+            <header class="wo-head">
+              <p class="wo-form">FORM TG-7</p>
+              <p class="wo-stamp wo-stamp-rework" data-stamp>WO-4420</p>
+            </header>
+            <dl class="wo-fields">
+              <div><dt>JOB</dt><dd>M8 × 1.25 rework</dd></div>
+              <div><dt>STATUS</dt><dd>BACK TO B-03</dd></div>
+            </dl>
+            <div class="wo-marks" aria-hidden="true">
+              <svg class="grease-svg grease-svg-sm" viewBox="0 0 180 56" data-grease-draw>
+                <path class="grease-line" d="M14 42 C 60 36, 110 48, 168 40"/>
+                <text class="grease-word grease-word-hold" x="22" y="30">REWORK</text>
+              </svg>
+            </div>
+          </div>
+        </article>
+      </li>
+      <li>
+        <article class="wo wo-hang" data-ticket>
+          <div class="wo-carbon" aria-hidden="true"></div>
+          <div class="wo-sheet">
+            <div class="wo-clip" aria-hidden="true"></div>
+            <header class="wo-head">
+              <p class="wo-form">FORM TG-7</p>
+              <p class="wo-stamp" data-stamp>WO-4423</p>
+            </header>
+            <dl class="wo-fields">
+              <div><dt>JOB</dt><dd>Acme 1-5 stub</dd></div>
+              <div><dt>STATUS</dt><dd>CERT IN C-11</dd></div>
+            </dl>
+            <div class="wo-marks" aria-hidden="true">
+              <svg class="grease-svg grease-svg-sm" viewBox="0 0 180 56" data-grease-draw>
+                <path class="grease-check" d="M18 30 L 32 44 L 66 14"/>
+                <text class="grease-word" x="78" y="36">GO</text>
+              </svg>
+            </div>
+          </div>
+        </article>
+      </li>
+      <li>
+        <article class="wo wo-hang wo-tilt" data-ticket>
+          <div class="wo-carbon" aria-hidden="true"></div>
+          <div class="wo-sheet">
+            <div class="wo-clip" aria-hidden="true"></div>
+            <header class="wo-head">
+              <p class="wo-form">FORM TG-7</p>
+              <p class="wo-stamp wo-stamp-bay" data-stamp>WO-4429</p>
+            </header>
+            <dl class="wo-fields">
+              <div><dt>JOB</dt><dd>7/8-9 LH custom</dd></div>
+              <div><dt>STATUS</dt><dd>IN BAY · print taped</dd></div>
+            </dl>
+            <div class="wo-marks" aria-hidden="true">
+              <svg class="grease-svg grease-svg-sm" viewBox="0 0 180 56" data-grease-draw>
+                <path class="grease-line" d="M18 38 C 70 32, 120 44, 164 36"/>
+                <text class="grease-word" x="24" y="28">BAY</text>
+              </svg>
+            </div>
+          </div>
+        </article>
+      </li>
+    </ol>
+  </main>
+
+  <footer class="shop-foot">
+    <div class="kickplate" aria-hidden="true"></div>
+    <p class="foot-stamp">THREAD GAUGE CO.</p>
+    <p>Bay 7 · Demo floor · Side Quest Operations house demo. No hours. No street. No ringing line.</p>
+    <p><a href="floor.html">Locker bank</a> · <a href="bay.html">Bay door</a></p>
+  </footer>
+  <script src="site.js" defer></script>
+</body>
+</html>

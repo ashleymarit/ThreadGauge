@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bay door — Thread Gauge Co.</title>
+  <meta name="description" content="Bay door for a fictional thread-gauge shop. Demo only. No hours, no street, no ringing line.">
+  <meta name="theme-color" content="#2a2e33">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800&family=IBM+Plex+Mono:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="page-bay">
+  <a class="skip" href="#floor">Skip to bay</a>
+
+  <div class="tubes" aria-hidden="true">
+    <span class="tube"></span>
+    <span class="tube"></span>
+    <span class="tube"></span>
+  </div>
+
+  <header class="mast">
+    <div class="mast-plate">
+      <a class="brand" href="index.html">
+        <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true">
+          <rect x="3" y="3" width="42" height="42" fill="#32383e" stroke="#9aa3ab" stroke-width="1.5"/>
+          <path d="M8 24h6l2-5 2.6 10 2.4-10 2 5h7" fill="none" stroke="#e6c84a" stroke-width="2.2" stroke-linejoin="round"/>
+          <circle cx="16" cy="36" r="3.2" fill="#c9d0d6"/>
+          <circle cx="32" cy="36" r="3.2" fill="#b42318"/>
+        </svg>
+        <span class="brand-type">
+          <span class="brand-name">Thread Gauge Co.</span>
+          <span class="brand-sub">GO · NO-GO</span>
+        </span>
+      </a>
+      <p class="mast-stamp">TG-BAY · DOOR SHUT</p>
+    </div>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="shop-nav">
+      <span class="nav-toggle-bar"></span>
+      Menu
+    </button>
+    <nav class="shop-nav" id="shop-nav" aria-label="Shop">
+      <a href="index.html"><span class="tag-no">A-01</span> Crib</a>
+      <a href="floor.html"><span class="tag-no">A-12</span> Floor</a>
+      <a href="tickets.html"><span class="tag-no">B-04</span> Tickets</a>
+      <a href="bay.html" aria-current="page"><span class="tag-no">C-09</span> Bay</a>
+    </nav>
+  </header>
+
+  <main id="floor" class="bay-main">
+    <section class="bay-door">
+      <div class="bay-copy">
+        <p class="wall-kicker">Bay door / pass-through</p>
+        <h1>Door’s shut. This floor isn’t open.</h1>
+        <p class="wall-lead">Thread Gauge Co. is a Side Quest Operations house demo. No hours. No street that exists. No line that rings.</p>
+        <dl class="bay-nap">
+          <div>
+            <dt>PLACE</dt>
+            <dd>Bay 7 · Demo floor<br>Lot 00, Gauge Way<br><em>not a real lot</em></dd>
+          </div>
+          <div>
+            <dt>SLIP</dt>
+            <dd>crib@threadgauge.demo<br><em>does not accept mail</em></dd>
+          </div>
+        </dl>
+      </div>
+
+      <form class="wo wo-form-card" id="bay-ticket" data-ticket novalidate>
+        <div class="wo-carbon" aria-hidden="true"></div>
+        <div class="wo-sheet">
+          <div class="wo-clip" aria-hidden="true"></div>
+          <header class="wo-head">
+            <p class="wo-form">FORM TG-9 · BAY SLIP</p>
+            <p class="wo-stamp" data-stamp>DEMO</p>
+          </header>
+          <p class="wo-shop">WRITE IT. IT DOES NOT LEAVE THIS PAGE.</p>
+          <label>
+            <span>JOB</span>
+            <input name="job" type="text" maxlength="80" placeholder="M10 × 1.5 plug, etc.">
+          </label>
+          <label>
+            <span>PITCH / SPEC</span>
+            <input name="pitch" type="text" maxlength="60" placeholder="class, series, print no.">
+          </label>
+          <label>
+            <span>FLOOR NOTE</span>
+            <textarea name="note" rows="3" maxlength="240" placeholder="What you would hang on the rail."></textarea>
+          </label>
+          <button class="btn-ticket" type="submit">Stamp the slip</button>
+          <p class="form-ack" id="form-ack" role="status" hidden>Stamped. Demo only — nothing was sent.</p>
+          <div class="wo-marks" aria-hidden="true">
+            <svg class="grease-svg grease-svg-sm" viewBox="0 0 180 56" data-grease-draw>
+              <path class="grease-check" d="M24 28 L 38 42 L 74 10"/>
+              <text class="grease-word" x="86" y="34">RECVD</text>
+            </svg>
+          </div>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="shop-foot">
+    <div class="kickplate" aria-hidden="true"></div>
+    <p class="foot-stamp">THREAD GAUGE CO.</p>
+    <p>Bay 7 · Demo floor · Side Quest Operations house demo. No hours. No street. No ringing line.</p>
+    <p><a href="index.html">Back to the crib</a></p>
+  </footer>
+  <script src="site.js" defer></script>
+</body>
+</html>
