@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Thread Gauge Co. — tool crib</title>
+  <meta name="description" content="Fictional machine-shop crib. We cut, chase, and certify threads. GO or NO-GO. Side Quest Operations house demo.">
+  <meta name="theme-color" content="#2a2e33">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800&family=IBM+Plex+Mono:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="page-crib">
+  <a class="skip" href="#floor">Skip to crib</a>
+
+  <div class="tubes" aria-hidden="true">
+    <span class="tube"></span>
+    <span class="tube"></span>
+    <span class="tube"></span>
+  </div>
+
+  <header class="mast">
+    <div class="mast-plate">
+      <a class="brand" href="index.html">
+        <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true">
+          <rect x="3" y="3" width="42" height="42" fill="#32383e" stroke="#9aa3ab" stroke-width="1.5"/>
+          <path d="M8 24h6l2-5 2.6 10 2.4-10 2 5h7" fill="none" stroke="#e6c84a" stroke-width="2.2" stroke-linejoin="round"/>
+          <circle cx="16" cy="36" r="3.2" fill="#c9d0d6"/>
+          <circle cx="32" cy="36" r="3.2" fill="#b42318"/>
+        </svg>
+        <span class="brand-type">
+          <span class="brand-name">Thread Gauge Co.</span>
+          <span class="brand-sub">GO · NO-GO</span>
+        </span>
+      </a>
+      <p class="mast-stamp">TG-CRIB · BAY 7 · DEMO</p>
+    </div>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="shop-nav">
+      <span class="nav-toggle-bar"></span>
+      Menu
+    </button>
+    <nav class="shop-nav" id="shop-nav" aria-label="Shop">
+      <a href="index.html" aria-current="page"><span class="tag-no">A-01</span> Crib</a>
+      <a href="floor.html"><span class="tag-no">A-12</span> Floor</a>
+      <a href="tickets.html"><span class="tag-no">B-04</span> Tickets</a>
+      <a href="bay.html"><span class="tag-no">C-09</span> Bay</a>
+    </nav>
+  </header>
+
+  <main id="floor" class="crib">
+    <section class="steel-wall">
+      <div class="wall-copy">
+        <p class="wall-kicker">Tool crib / thread work</p>
+        <h1>If it doesn’t gauge, it stays on the bench.</h1>
+        <p class="wall-lead">We cut, chase, and certify threads. Plug. Ring. Pipe. Left-hand if you bring the print.</p>
+        <p class="grease-scrawl" data-grease="underline">check the pitch</p>
+        <div class="wall-actions">
+          <a class="btn-steel" href="floor.html">Open the lockers</a>
+          <a class="btn-ticket" href="tickets.html">Read the tickets</a>
+        </div>
+      </div>
+
+      <aside class="gauge-block" aria-label="Go / no-go gauge">
+        <svg class="gauge-face" viewBox="0 0 220 220" role="img" aria-labelledby="gauge-title">
+          <title id="gauge-title">Shop gauge settling on GO</title>
+          <defs>
+            <radialGradient id="dial" cx="50%" cy="42%" r="58%">
+              <stop offset="0%" stop-color="#6a7178"/>
+              <stop offset="70%" stop-color="#3a4046"/>
+              <stop offset="100%" stop-color="#1e2226"/>
+            </radialGradient>
+          </defs>
+          <circle cx="110" cy="110" r="104" fill="#2b3035" stroke="#8b939b" stroke-width="4"/>
+          <circle cx="110" cy="110" r="88" fill="url(#dial)" stroke="#c5ccd2" stroke-width="2"/>
+          <g fill="#d5dbe0" font-family="IBM Plex Mono, monospace" font-size="11" text-anchor="middle">
+            <text x="48" y="150">NO-GO</text>
+            <text x="172" y="150">GO</text>
+          </g>
+          <path d="M110 110 L58 148" stroke="#8a9096" stroke-width="2"/>
+          <path d="M110 110 L162 148" stroke="#8a9096" stroke-width="2"/>
+          <g class="needle" data-needle>
+            <polygon points="110,110 104,42 110,32 116,42" fill="#b42318"/>
+            <circle cx="110" cy="110" r="8" fill="#1a1c1f" stroke="#e6c84a" stroke-width="2"/>
+          </g>
+          <text x="110" y="188" text-anchor="middle" fill="#e6c84a" font-family="IBM Plex Mono, monospace" font-size="10">CLASS 2A</text>
+        </svg>
+        <p class="gauge-cap">Needle settles when the ticket stamps.</p>
+      </aside>
+
+      <article class="wo" data-ticket aria-label="Work order being filled">
+        <div class="wo-carbon" aria-hidden="true"></div>
+        <div class="wo-sheet">
+          <div class="wo-clip" aria-hidden="true"></div>
+          <header class="wo-head">
+            <p class="wo-form">FORM TG-7 · SHOP COPY</p>
+            <p class="wo-stamp" data-stamp>WO-4407</p>
+          </header>
+          <p class="wo-shop">THREAD GAUGE CO. · BAY 7</p>
+          <dl class="wo-fields">
+            <div>
+              <dt>JOB</dt>
+              <dd data-fill>M12 × 1.75 plug set</dd>
+            </div>
+            <div>
+              <dt>PITCH</dt>
+              <dd data-fill>1.75 mm</dd>
+            </div>
+            <div>
+              <dt>CLASS</dt>
+              <dd data-fill>6H / GO · NO-GO</dd>
+            </div>
+            <div>
+              <dt>QTY</dt>
+              <dd data-fill>1 set · 2 pins</dd>
+            </div>
+          </dl>
+          <p class="wo-note">
+            <span class="wo-note-label">FLOOR NOTE</span>
+            <span data-fill>Pins clean. Stamp the box. Hang on A-12.</span>
+          </p>
+          <div class="wo-marks" aria-hidden="true">
+            <svg class="grease-svg" viewBox="0 0 220 70" data-grease-draw>
+              <path class="grease-line" d="M12 48 C 40 44, 80 52, 118 46 S 180 40, 208 44"/>
+              <path class="grease-check" d="M28 22 L 42 38 L 78 8"/>
+              <text class="grease-word" x="92" y="32">GO</text>
+            </svg>
+          </div>
+          <footer class="wo-foot">
+            <span>DEMO TICKET</span>
+            <span>NOT A REAL JOB</span>
+          </footer>
+        </div>
+      </article>
+    </section>
+
+    <section class="locker-preview" aria-labelledby="lockers-title">
+      <div class="section-rule">
+        <h2 id="lockers-title">Crib lockers</h2>
+        <p>What’s on the wall. Open the floor for the full bank.</p>
+      </div>
+      <ul class="locker-row">
+        <li>
+          <a class="locker-door" href="floor.html#plug">
+            <span class="locker-plate">A-12</span>
+            <span class="locker-name">Plug gauges</span>
+            <span class="locker-handle" aria-hidden="true"></span>
+          </a>
+        </li>
+        <li>
+          <a class="locker-door" href="floor.html#ring">
+            <span class="locker-plate">A-14</span>
+            <span class="locker-name">Ring gauges</span>
+            <span class="locker-handle" aria-hidden="true"></span>
+          </a>
+        </li>
+        <li>
+          <a class="locker-door" href="floor.html#chase">
+            <span class="locker-plate">B-03</span>
+            <span class="locker-name">Chase &amp; mill</span>
+            <span class="locker-handle" aria-hidden="true"></span>
+          </a>
+        </li>
+        <li>
+          <a class="locker-door" href="floor.html#wire">
+            <span class="locker-plate">B-07</span>
+            <span class="locker-name">Wires &amp; blocks</span>
+            <span class="locker-handle" aria-hidden="true"></span>
+          </a>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="shop-foot">
+    <div class="kickplate" aria-hidden="true"></div>
+    <p class="foot-stamp">THREAD GAUGE CO.</p>
+    <p>Bay 7 · Demo floor · Side Quest Operations house demo. No hours. No street. No ringing line.</p>
+    <p><a href="bay.html">Bay door</a> · <a href="tickets.html">Ticket rail</a></p>
+  </footer>
+  <script src="site.js" defer></script>
+</body>
+</html>
